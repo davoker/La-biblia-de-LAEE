@@ -1,0 +1,80 @@
+/* La biblia de LAEE — ajustes de lectura para las 12 guías ------------------------------------------------
+   Sustituye el CSS original de VK (que fija una columna de 720px) por un diseño fluido:
+   el texto ocupa casi todo el ancho de la pantalla y las tablas se ven completas.
+   Se carga el último de cada guía; por eso casi todo lleva !important (VK fija algunos
+   anchos además en estilos en línea, y !important del CSS gana a los estilos en línea).
+   -------------------------------------------------------------------------------------------------------- */
+
+/* ---------- 1) Texto a todo el ancho de la pantalla ----------
+   VK: .article_layer .article_layer__content { width: 720px }  */
+
+.article_layer .article_layer__content {
+  width: auto !important;
+  max-width: none !important;
+  margin-left: 32px !important;
+  margin-right: 32px !important;
+  /* ¿El renglón te parece demasiado largo? Descomenta la línea de abajo para limitarlo: */
+  /* max-width: 1500px !important; */
+}
+
+/* VK: .article_layer .article_layer__content_footer_inner { width: 720px } */
+.article_layer .article_layer__content_footer_inner {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* VK: .article_layer__tts_player__inner { width: 720px } */
+.article_layer__tts_player__inner { width: 100% !important; }
+
+/* VK: .article_layer__header_owner_name { width: 410px } */
+.article_layer__header_owner_name {
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* ---------- 2) Tablas: a todo el ancho y sin recorte ----------
+   En el HTML guardado el contenedor quedó con width:1507.5px y transform:translateX(-790.5px)
+   (el trozo de tabla que se veía al guardar), y VK además lo saca de la columna con
+   width:calc(100vw - 142px); margin-left:140px.  */
+
+.article .ArticleTableWrapper,
+.article.article_mobile .ArticleTableWrapper {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  transform: none !important;
+  box-sizing: border-box;
+  overflow-x: auto;   /* red de seguridad: solo aparece si de verdad no cabe */
+}
+
+/* VK: .ArticleScrollContent { margin:-1rem; padding:1rem } — evita desbordes de 2rem */
+.ArticleScrollContent {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ArticleTableContainer {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* VK: .ArticleTable { width:2021px (en línea); min-width:720px } */
+.ArticleTable {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Anchos fijos de cada celda (392px, 180px…) escritos en línea: se reparten solos */
+.ArticleTableCell {
+  width: auto !important;
+  overflow-wrap: anywhere;
+}
+
+.ArticleTableCell img {
+  max-width: 100%;
+  height: auto;
+}

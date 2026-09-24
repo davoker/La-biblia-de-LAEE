@@ -1,0 +1,278 @@
+/* La biblia de LAEE — menú lateral + visor */
+
+:root {
+  --fondo:        #12151a;
+  --panel:        #1a1f26;
+  --panel-2:      #20262f;
+  --borde:        #2c333d;
+  --texto:        #d7dee6;
+  --texto-tenue:  #8b97a5;
+  --acento:       #d9a441;
+  --acento-suave: rgba(217, 164, 65, .12);
+  --ancho-menu:   300px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 15px/1.5 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------- Menú lateral ---------------- */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: var(--ancho-menu);
+  min-width: var(--ancho-menu);
+  height: 100vh;
+  background: var(--panel);
+  border-right: 1px solid var(--borde);
+  overflow: hidden;
+}
+
+.menu__cabecera {
+  padding: 22px 20px 16px;
+  border-bottom: 1px solid var(--borde);
+  background:
+    linear-gradient(160deg, rgba(217, 164, 65, .10), transparent 60%),
+    var(--panel-2);
+}
+
+.menu__saludo {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.menu__cabecera h1 {
+  margin: 4px 0 2px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.menu__cabecera h1 em {
+  font-style: normal;
+  color: var(--acento);
+}
+
+.menu__sub {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--texto-tenue);
+}
+
+.menu__filtro {
+  width: 100%;
+  margin-top: 14px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--texto);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  outline: none;
+}
+
+.menu__filtro:focus { border-color: var(--acento); }
+.menu__filtro::placeholder { color: var(--texto-tenue); }
+
+.menu__lista {
+  flex: 1;
+  padding: 10px 0 18px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--borde) transparent;
+}
+
+.menu__lista::-webkit-scrollbar { width: 8px; }
+.menu__lista::-webkit-scrollbar-thumb { background: var(--borde); border-radius: 4px; }
+
+.menu__grupo { padding: 6px 0; }
+.menu__grupo[hidden] { display: none; }
+
+.menu__grupo h2 {
+  margin: 12px 20px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+
+.menu__lista a {
+  display: block;
+  padding: 9px 20px;
+  color: var(--texto);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background .12s ease, border-color .12s ease;
+}
+
+.menu__lista a:hover {
+  background: var(--panel-2);
+  border-left-color: var(--borde);
+}
+
+.menu__lista a.activo {
+  background: var(--acento-suave);
+  border-left-color: var(--acento);
+}
+
+.guia__nombre {
+  display: block;
+  font-size: 14.5px;
+}
+
+.guia__nota {
+  display: block;
+  font-size: 12px;
+  color: var(--texto-tenue);
+}
+
+.menu__vacio {
+  margin: 14px 20px;
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.menu__pie {
+  padding: 12px 20px;
+  font-size: 11.5px;
+  color: var(--texto-tenue);
+  border-top: 1px solid var(--borde);
+  background: var(--panel-2);
+}
+
+.menu__pie p { margin: 0; }
+
+/* ---------------- Visor ---------------- */
+
+.visor {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+}
+
+.visor__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--borde);
+}
+
+.visor__titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visor__enlace {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--acento);
+  text-decoration: none;
+}
+
+.visor__enlace:hover { text-decoration: underline; }
+
+.visor__iframe {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+/* ---------------- Panel de inicio ---------------- */
+
+.panel {
+  flex: 1;
+  padding: 40px 44px;
+  overflow-y: auto;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  color: var(--acento);
+}
+
+.panel p { max-width: 62ch; color: var(--texto); }
+
+.panel__atajos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+  max-width: 900px;
+  padding: 0;
+  margin: 24px 0;
+  list-style: none;
+}
+
+.panel__atajos a {
+  display: block;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  text-decoration: none;
+  transition: border-color .12s ease, background .12s ease;
+}
+
+.panel__atajos a:hover {
+  background: var(--panel-2);
+  border-color: var(--acento);
+}
+
+.panel__pie,
+.panel code {
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.panel code {
+  padding: 1px 5px;
+  background: var(--panel-2);
+  border-radius: 4px;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 860px) {
+  body { flex-direction: column; }
+
+  .menu {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-height: 45vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .visor { height: 55vh; }
+
+  .panel { padding: 24px 20px; }
+}

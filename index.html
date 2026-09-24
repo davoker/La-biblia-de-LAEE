@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La biblia de LAEE — Índice de guías</title>
+<meta name="description" content="Índice de guías de S.T.A.L.K.E.R. Lost Alpha Enhanced Edition">
+<link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+<aside class="menu">
+  <header class="menu__cabecera">
+    <p class="menu__saludo">Guías de S.T.A.L.K.E.R.</p>
+    <h1>La biblia de <em>LAEE</em></h1>
+    <p class="menu__sub">Lost Alpha Enhanced Edition</p>
+    <input type="search" id="filtro" class="menu__filtro" placeholder="Filtrar guías…" autocomplete="off" aria-label="Filtrar guías">
+  </header>
+
+  <nav class="menu__lista" id="menu" aria-label="Guías">
+    <section class="menu__grupo" data-categoria="General">
+      <h2>General</h2>
+      <a href="guias/descripcion-de-laee.html" data-slug="descripcion-de-laee">
+        <span class="guia__nombre">Descripción de LAEE</span>
+        <span class="guia__nota">Qué es y qué cambia</span>
+      </a>
+      <a href="guias/niveles-de-dificultad.html" data-slug="niveles-de-dificultad">
+        <span class="guia__nombre">Niveles de dificultad</span>
+        <span class="guia__nota">Qué cambia en cada nivel</span>
+      </a>
+      <a href="guias/preguntas-y-respuestas.html" data-slug="preguntas-y-respuestas">
+        <span class="guia__nombre">Preguntas y respuestas</span>
+        <span class="guia__nota">Dudas frecuentes</span>
+      </a>
+    </section>
+
+    <section class="menu__grupo" data-categoria="Guías de juego">
+      <h2>Guías de juego</h2>
+      <a href="guias/consejos-para-novatos.html" data-slug="consejos-para-novatos">
+        <span class="guia__nombre">Consejos para novatos</span>
+        <span class="guia__nota">Primeros pasos en la Zona</span>
+      </a>
+      <a href="guias/que-es-el-tier-del-mapa.html" data-slug="que-es-el-tier-del-mapa">
+        <span class="guia__nombre">Que es el Tier del mapa</span>
+        <span class="guia__nota">Progresión de las zonas</span>
+      </a>
+      <a href="guias/enciclopedia-de-artefactos.html" data-slug="enciclopedia-de-artefactos">
+        <span class="guia__nombre">Enciclopedia de artefactos de LAEE</span>
+        <span class="guia__nota">Todos los artefactos</span>
+      </a>
+    </section>
+
+    <section class="menu__grupo" data-categoria="Objetos y secretos">
+      <h2>Objetos y secretos</h2>
+      <a href="guias/documentos-secretos.html" data-slug="documentos-secretos">
+        <span class="guia__nombre">Documentos secretos y contraseñas</span>
+        <span class="guia__nota">Ubicaciones y códigos</span>
+      </a>
+      <a href="guias/usbs-de-actualizacion.html" data-slug="usbs-de-actualizacion">
+        <span class="guia__nombre">USBs de actualización</span>
+        <span class="guia__nota">Dónde encontrarlas</span>
+      </a>
+      <a href="guias/herramientas-para-tecnicos.html" data-slug="herramientas-para-tecnicos">
+        <span class="guia__nombre">Herramientas para técnicos</span>
+        <span class="guia__nota">Mejoras y componentes</span>
+      </a>
+    </section>
+
+    <section class="menu__grupo" data-categoria="Guardado">
+      <h2>Guardado</h2>
+      <a href="guias/mapa-de-zonas-de-guardado.html" data-slug="mapa-de-zonas-de-guardado">
+        <span class="guia__nombre">Mapa de zonas de guardado</span>
+        <span class="guia__nota">Zonas de guardado</span>
+      </a>
+      <a href="guias/sistema-de-guardado.html" data-slug="sistema-de-guardado">
+        <span class="guia__nombre">Sistema de guardado</span>
+        <span class="guia__nota">Cómo funciona</span>
+      </a>
+    </section>
+
+    <section class="menu__grupo" data-categoria="Rendimiento">
+      <h2>Rendimiento</h2>
+      <a href="guias/fallos-629-graficas-amd.html" data-slug="fallos-629-graficas-amd">
+        <span class="guia__nombre">Fallos 629 en tarjetas gráficas AMD</span>
+        <span class="guia__nota">Cierres y bloqueos</span>
+      </a>
+    </section>
+
+    <p class="menu__vacio" id="vacio" hidden>Ninguna guía coincide con el filtro.</p>
+  </nav>
+
+  <footer class="menu__pie">
+    <p>Guías guardadas de la comunidad de VK · reorganizadas y limpias para uso local.</p>
+  </footer>
+</aside>
+
+<main class="visor">
+  <div class="visor__barra">
+    <span class="visor__titulo" id="tituloGuia">Índice</span>
+    <span class="visor__acciones">
+      <a class="visor__enlace" id="enlaceAbierta" href="#" target="_blank" rel="noopener" hidden>Abrir en pestaña ↗</a>
+    </span>
+  </div>
+
+  <section class="panel" id="panelInicio">
+    <h2>Bienvenido a la biblia de LAEE</h2>
+    <p>Elige una guía en el menú de la izquierda. Cada guía se muestra aquí mismo; si prefieres,
+       ábrela en su propia pestaña con el enlace de arriba.</p>
+    <ul class="panel__atajos" id="atajos"></ul>
+    <p class="panel__pie">Atajo: puedes enlazar directamente a una guía añadiendo <code>#slug</code> a esta página,
+       por ejemplo <code>index.html#sistema-de-guardado</code>.</p>
+  </section>
+
+  <iframe class="visor__iframe" id="visor" title="Guía seleccionada" hidden></iframe>
+</main>
+
+<script src="js/menu.js"></script>
+</body>
+</html>
