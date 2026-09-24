@@ -7,7 +7,7 @@
   font-family: 'VK Sans Display';
   font-weight: 300;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayLightLatin.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayLightLatin.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayLightLatin.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayLightLatin.v320.woff) format('woff');
   unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;
 }
 
@@ -16,7 +16,7 @@
   font-family: 'VK Sans Display';
   font-weight: 300;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayLightCyrillic.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayLightCyrillic.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayLightCyrillic.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayLightCyrillic.v320.woff) format('woff');
   unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;
 }
 
@@ -25,7 +25,7 @@
   font-family: 'VK Sans Display';
   font-weight: 300;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayLightRest.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayLightRest.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayLightRest.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayLightRest.v320.woff) format('woff');
   unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;
 }
 
@@ -34,7 +34,7 @@
   font-family: 'VK Sans Display';
   font-weight: 400;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayRegularLatin.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayRegularLatin.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayRegularLatin.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayRegularLatin.v320.woff) format('woff');
   unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;
 }
 
@@ -43,7 +43,7 @@
   font-family: 'VK Sans Display';
   font-weight: 400;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayRegularCyrillic.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayRegularCyrillic.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayRegularCyrillic.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayRegularCyrillic.v320.woff) format('woff');
   unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;
 }
 
@@ -52,7 +52,7 @@
   font-family: 'VK Sans Display';
   font-weight: 400;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayRegularRest.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayRegularRest.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayRegularRest.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayRegularRest.v320.woff) format('woff');
   unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;
 }
 
@@ -61,7 +61,7 @@
   font-family: 'VK Sans Display';
   font-weight: 500;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayMediumLatin.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayMediumLatin.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayMediumLatin.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayMediumLatin.v320.woff) format('woff');
   unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;
 }
 
@@ -70,7 +70,7 @@
   font-family: 'VK Sans Display';
   font-weight: 500;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayMediumCyrillic.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayMediumCyrillic.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayMediumCyrillic.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayMediumCyrillic.v320.woff) format('woff');
   unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;
 }
 
@@ -79,7 +79,7 @@
   font-family: 'VK Sans Display';
   font-weight: 500;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayMediumRest.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayMediumRest.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayMediumRest.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayMediumRest.v320.woff) format('woff');
   unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;
 }
 
@@ -88,7 +88,7 @@
   font-family: 'VK Sans Display';
   font-weight: 600;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayDemiBoldLatin.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayDemiBoldLatin.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayDemiBoldLatin.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayDemiBoldLatin.v320.woff) format('woff');
   unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;
 }
 
@@ -97,7 +97,7 @@
   font-family: 'VK Sans Display';
   font-weight: 600;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff) format('woff');
   unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;
 }
 
@@ -106,7 +106,7 @@
   font-family: 'VK Sans Display';
   font-weight: 600;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayDemiBoldRest.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayDemiBoldRest.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayDemiBoldRest.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayDemiBoldRest.v320.woff) format('woff');
   unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;
 }
 
@@ -115,7 +115,7 @@
   font-family: 'VK Sans Display';
   font-weight: 700;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayBoldLatin.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayBoldLatin.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayBoldLatin.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayBoldLatin.v320.woff) format('woff');
   unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;
 }
 
@@ -124,7 +124,7 @@
   font-family: 'VK Sans Display';
   font-weight: 700;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayBoldCyrillic.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayBoldCyrillic.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayBoldCyrillic.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayBoldCyrillic.v320.woff) format('woff');
   unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;
 }
 
@@ -133,7 +133,7 @@
   font-family: 'VK Sans Display';
   font-weight: 700;
   font-display: swap;
-  src: url(https://vk.com/css/fonts/VKSansDisplayBoldRest.v320.woff2) format('woff2'), url(https://vk.com/css/fonts/VKSansDisplayBoldRest.v320.woff) format('woff');
+  src: url(css/fonts/VKSansDisplayBoldRest.v320.woff2) format('woff2'), url(css/fonts/VKSansDisplayBoldRest.v320.woff) format('woff');
   unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;
 }
 

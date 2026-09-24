@@ -78,3 +78,109 @@
   max-width: 100%;
   height: auto;
 }
+
+/* ---------- 3) Frases <cite>: sin las líneas decorativas ----------
+   VK dibuja una barra de 120px encima y debajo de cada <cite> hijo directo del artículo
+   (son las líneas que separan avisos como "¡Advertencia!…"). Se eliminan en todas las guías
+   y las frases seguidas quedan centradas, una debajo de otra, como una lista.  */
+
+.article > cite::before,
+.article > cite::after {
+  content: none !important;
+  display: none !important;
+}
+
+.article > cite {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.article > cite + cite {
+  margin-top: 0 !important;
+}
+
+/* ---------- 4) Ornamentos data-sep: eliminados ----------
+   VK marcaba algunos bloques con data-sep="N" para dibujar encima un ornamento
+   de 35×9 px (tres motivos geométricos, negros al 50% de opacidad) y añadir
+   margin-top: 96px de aire. Salía en 4 sitios de 2 guías (y en 2 <cite> donde
+   ni siquiera se dibujaba). Los atributos ya están borrados de los HTML;
+   esto es la red de seguridad por si quedara alguno.  */
+
+.article > [data-sep]::before {
+  content: none !important;
+  display: none !important;
+}
+
+.article > [data-sep]:not(cite) {
+  margin-top: 40px !important;
+}
+
+/* ---------- 5) Cabecera: logo propio (una versión por tema) ----------
+   VK ponía: icono redondo de 48×48 + nombre de la comunidad traducido por el
+   traductor de VK ("Edición mejorada de STALKER Lost Alpha") + fecha de
+   publicación debajo. Se ha sustituido todo por un único logo con dos versiones:
+       tema claro  -> imagenes/LAEE_logo_top_black.png   (logo negro)
+       tema oscuro -> imagenes/LAEE_logo_top_white.png   (logo blanco)
+   Las rutas van referidas desde este css (../imagenes/...). El cambio de versión
+   lo hace el CSS solo: js/tema.js añade o quita la clase "article_dark" en
+   .article_layer al pulsar la luna, así que el logo cambia al instante, sin
+   recargar. Mantiene la altura original de 48 px y el ancho lo toma de la propia
+   imagen, así que vale CUALQUIER proporción (background-size: auto 100%).
+   Si falta alguno de los dos ficheros, ese tema sale con el hueco vacío (no
+   aparece ningún icono roto).  */
+
+.article_layer .article_layer__header .article_layer__header_logo {
+  display: block;
+  height: 48px;
+  background-image: url(../imagenes/LAEE_logo_top_black.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+}
+
+/* Tema oscuro: article_dark la pone (o la quita) js/tema.js en .article_layer */
+.article_layer.article_dark .article_layer__header .article_layer__header_logo {
+  background-image: url(../imagenes/LAEE_logo_top_white.png);
+}
+
+/* ---------- 6) Botón "volver arriba" (la flecha) ----------
+   VK dejó la flecha en el HTML pero sin su JavaScript, así que no hacía nada; y
+   ocupaba una franja fija de 115 px a la izquierda de TODA la pantalla
+   (position:fixed; height:100%), con lo que se comía los clics de esa zona.
+   Ahora se coloca justo debajo del botón de la luna (arriba a la derecha) y solo
+   ocupa su propio icono de 48×48. js/arriba.js le da su función: al pulsarla
+   sube hasta el principio de la página con desplazamiento suave.  */
+
+.article_layer .article_layer__up {
+  position: fixed;
+  top: 80px;        /* la luna ocupa de 20 a 68 px: 12 px de aire debajo */
+  right: 30px;      /* mismo borde que .article_layer__top_actions (la luna) */
+  left: auto;
+  width: 48px;
+  min-width: 0;     /* VK fija min-width:115px */
+  height: 48px;     /* VK fija height:100% */
+  background-position: center center;
+}
+
+.article_layer .article_layer__up:hover {
+  opacity: .7;
+}
+
+/* ---------- 7) Imágenes del contenido, un 30% más pequeñas ----------
+   Al pasar a ancho fluido, las fotos y los mapas (figure > .article_figure_content)
+   ocupaban todo el ancho de la página y quedaban desproporcionados. Dos reglas van
+   juntas para que TODO baje al 70%, sea cual sea el ancho que traiga VK:
+     · zoom: 0.7   -> escala los anchos fijos en píxeles (160, 499, 1157...) al 70%.
+     · max-width: 70% -> las figuras a "width:100%" o "width:2560px" se van al 70%
+       del ancho de columna (con zoom solo, el navegador las volvía a estirar al 100%).
+   La altura la calcula VK con un porcentaje del ancho, así que baja sola y no quedan
+   huecos; y sigue quedando centrada por el `margin: 0 auto` que ya trae VK.
+   Los carruseles no se ven afectados: sus flechas se desplazan en porcentaje, así
+   que la animación sigue encajando con la imagen. Los controles y el contador
+   ("1 de 3") se reducen también, al ir dentro de la misma figura.
+   Para graduarlo: 0.6/-60% (zoom .6 + max-width 60%), 0.8/-20% (zoom .8 + 80%).  */
+
+figure .article_figure_content {
+  zoom: 0.7;
+  max-width: 70% !important;
+}
