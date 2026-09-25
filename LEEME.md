@@ -9,8 +9,9 @@ limpias y con las referencias rotas arregladas.
 - **Recomendado:** abrir `index.html`. Muestra un menú lateral con todas las
   guías y un visor a la derecha donde se carga la guía elegida.
 - Cada guía también se puede abrir directamente desde `guias/*.html`.
-- Enlaces directos: `index.html#sistema-de-guardado` (el `#` va con el *slug*
-  de la guía, todos en minúsculas y sin acentos).
+- **Atajo:** puedes dirigirte directamente a una guía añadiendo `#slug` a esta
+  página, por ejemplo `index.html#sistema-de-guardado`. El `#` va con el *slug*
+  de la guía, todos en minúsculas y sin acentos.
 
 > Nota: si el navegador bloquea algo al abrir con `file://`, basta con servir
 > la carpeta por HTTP local (por ejemplo `python -m http.server` dentro de ella).
@@ -151,6 +152,12 @@ La biblia de LAEE/
 - **Pie del menú lateral:** el aviso "Guías guardadas de la comunidad de VK ·
   reorganizadas y limpias para uso local." se ha quitado del `index.html`,
   junto con su regla `.menu__pie` de `css/menu.css`.
+- **Aviso de atajo en la portada:** el párrafo "Atajo: puedes enlazar
+  directamente a una guía añadiendo `#slug` a esta página, por ejemplo
+  `index.html#sistema-de-guardado`." se ha quitado del `index.html` (con sus
+  reglas `.panel__pie` y `.panel code` de `css/menu.css`), por ser un detalle
+  interno que no debe mostrarse como mensaje en la página principal. El atajo
+  sigue funcionando igual y queda explicado en "Cómo abrirla".
 - Los enlaces a `m.vk.com/@stalker_enhanced_edition-…` que aparecen en los
   metadatos son el origen original de cada guía.
 

@@ -236,18 +236,6 @@ body {
   border-color: var(--acento);
 }
 
-.panel__pie,
-.panel code {
-  font-size: 13px;
-  color: var(--texto-tenue);
-}
-
-.panel code {
-  padding: 1px 5px;
-  background: var(--panel-2);
-  border-radius: 4px;
-}
-
 /* ---------------- Responsive ---------------- */
 
 @media (max-width: 860px) {
